@@ -3,8 +3,8 @@ package com.facebook.testsuite;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.facebook.pages.FacebookApp;
@@ -18,7 +18,7 @@ public class TestFacebookWebAndApp {
 	protected FacebookApp FacebookAppPage;
 	
 	WebDriver driver=null;
-	@BeforeTest
+	@BeforeClass
 	public void setUp()
 	{
 		
@@ -64,7 +64,7 @@ public class TestFacebookWebAndApp {
 		
 		
 	}
-	@AfterTest
+	@AfterClass
 	public void tearDown()
 	{
 		driver.close();
